@@ -31,5 +31,5 @@
 
 **Collaborators:**
 
--   Dionmy Olivares - GitHub Username: hoero
--   Lee Eaton - GitHub Username: leeeaton885
+-   Dionmy Olivares - GitHub Username: [hoero](https://github.com/hoero)
+-   Lee Eaton - GitHub Username: [leeeaton885](https://github.com/leeeaton885)
