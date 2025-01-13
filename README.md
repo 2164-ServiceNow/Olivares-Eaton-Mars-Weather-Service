@@ -8,10 +8,10 @@
 -   CSS (TailwindCss)
 -   JavaScript
 -   AngularJS (1.8.2) last one
--   [InSight: Mars Weather Service API] : https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf
--   [Mars Rover Photos] :https://github.com/chrisccerami/mars-photo-api
--   [APOD: Astronomy Picture of the Day] : https://github.com/nasa/apod-api
--   [NASA Image and Video Library] : https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf
+-   [InSight: Mars Weather Service API](https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf)
+-   [Mars Rover Photos](https://github.com/chrisccerami/mars-photo-api)
+-   [APOD: Astronomy Picture of the Day](https://github.com/nasa/apod-api)
+-   [NASA Image and Video Library](https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf)
 
 **User Stories:** (8 Total - 4 Per Developer)
 
