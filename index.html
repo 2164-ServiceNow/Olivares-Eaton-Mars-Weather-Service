@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html
+    lang="en"
+    ng-app="app"
+    ng-controller="backgroundImageController"
+    style="width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
+>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Mars Weather Service</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
     </head>
-    <body>
-        <p>{{5 *60}}</p>
+    <body
+        style="
+            width: 100vw;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+        "
+    >
         <script src="index.js"></script>
     </body>
 </html>
