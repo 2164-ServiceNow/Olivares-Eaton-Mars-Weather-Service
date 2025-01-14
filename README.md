@@ -29,6 +29,13 @@
 -   Detailed instructions for setting up the development environment (e.g., Node.js version, npm/yarn commands, AngularJS CLI commands if applicable).
 -   Precise steps to install all project dependencies.
 
+**Styleguide:**
+
+-   4 spaces for indentation.
+-   Controllers folder for controllers.
+-   Models folder for services.
+-   Views folder for all html.
+
 **Collaborators:**
 
 -   Dionmy Olivares - GitHub Username: [hoero](https://github.com/hoero)
