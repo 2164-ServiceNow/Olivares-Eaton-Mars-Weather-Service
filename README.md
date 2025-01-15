@@ -34,7 +34,7 @@
 -   4 spaces for indentation.
 -   Controllers folder for controllers.
 -   Models folder for services.
--   Views folder for directives.
+-   Views folder for HTML.
 
 **Collaborators:**
 
