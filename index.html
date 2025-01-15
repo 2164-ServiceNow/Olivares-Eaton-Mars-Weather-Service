@@ -21,6 +21,15 @@
             background-color: rgba(0, 0, 0, 0.8);
         "
     >
+        <div ng-controller="weatherController">
+            <h1>Weather at Elysium Planitia, Mars</h1>
+            <h3>Sol: {{sol}}</h3>
+            <p>Season: {{season}}</p>
+            <p>Atmospheric Temperature: {{at}}&deg;C</p>
+            <p>Wind Speed: {{hws}}m/s</p>
+            <p>Atmospheric Pressure: {{pre}}Pa</p>
+            <p>Wind Direction: {{wd}}</p>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
