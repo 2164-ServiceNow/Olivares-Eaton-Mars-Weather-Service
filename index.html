@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mars Weather Service</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
     </head>
@@ -21,15 +21,12 @@
             background-color: rgba(0, 0, 0, 0.8);
         "
     >
-        <div ng-controller="weatherController">
-            <h1>Weather at Elysium Planitia, Mars</h1>
-            <h3>Sol: {{sol}}</h3>
-            <p>Season: {{season}}</p>
-            <p>Atmospheric Temperature: {{at}}&deg;C</p>
-            <p>Wind Speed: {{hws}}m/s</p>
-            <p>Atmospheric Pressure: {{pre}}Pa</p>
-            <p>Wind Direction: {{wd}}</p>
-        </div>
+        <a href="/">Home</a>
+        <a href="/weather">Weather</a>
+
+        <div ng-view></div>
+        <script src="Models/weatherPage.js"></script>
+        <script src="Models/weather.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
