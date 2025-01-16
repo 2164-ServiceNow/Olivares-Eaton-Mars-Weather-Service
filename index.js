@@ -4,7 +4,7 @@ const apiKey = 'CgpgMC0Wtld60xf2JqkVIeqBDboBvHOmzlSVJIE9';
 const app = angular.module('app', ['ngRoute', 'navigation', 'feed']);
 
 // Gets Astronomy Picture of the Day on load
-app.controller('backgroundImageController', ($scope, $http) => {
+app.controller('backgroundImageController', function ($scope, $http) {
     $scope.bgImg = {};
     $http.get(`${apod}${apiKey}`).then((res) => {
         $scope.bgImg = res.data;
@@ -12,7 +12,7 @@ app.controller('backgroundImageController', ($scope, $http) => {
 });
 
 // Routing
-app.config(($routeProvider) => {
+app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'pages/home.html',
