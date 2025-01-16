@@ -1,2 +1,4 @@
-<h1>Rovers...</h1>
-<h2>{{rovers}}</h2>
+<ul>
+    <li ng-repeat="rover in rovers" ng-click="selectRover(rover)">{{rover.name}}</li>
+    <rover-manifest rover="selectedRover"></rover-manifest>
+</ul>
