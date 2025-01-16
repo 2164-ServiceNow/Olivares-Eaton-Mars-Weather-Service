@@ -4,6 +4,7 @@
     ng-app="app"
     ng-controller="backgroundImageController"
     style="width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
+    on-scroll
 >
     <head>
         <meta charset="UTF-8" />
@@ -25,6 +26,8 @@
         <navigation></navigation>
         <div ng-view></div>
         <script src="index.js"></script>
+        <script src="components/models/scroll.js"></script>
+        <script src="components/controllers/on-scroll.js"></script>
         <script src="components/controllers/nav.js"></script>
         <script src="components/controllers/feed.js"></script>
     </body>

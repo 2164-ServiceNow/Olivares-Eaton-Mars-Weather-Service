@@ -4,14 +4,16 @@ const feed = angular.module('feed', []);
 
 feed.component('feed', {
     templateUrl: 'components/views/feed.html',
-    controller: ($scope, $http) => {
+    controller: ($scope, $http, scrollService) => {
         $scope.items = [];
-        $scope.videos = [];
+        $scope.next = '';
 
+        // Get first list of videos
         $http
             .get(nasaImageAndVideoLibrary)
             .then((res) => {
                 $scope.items = res.data.collection.items;
+                $scope.next = res.data.collection.links[0].href;
             })
             .then(() => {
                 if ($scope.items.length > 0) {
@@ -22,5 +24,27 @@ feed.component('feed', {
                     }
                 }
             });
+
+        // Load more on scroll end (Infinite Scroll)
+        $scope.$watch(
+            function () {
+                return scrollService.getScroll();
+            },
+            function (data) {
+                if (
+                    scrollService.getHeight() -
+                        data -
+                        scrollService.getViewportHeight() <
+                    0
+                ) {
+                    $http.get($scope.next).then((res) => {
+                        $scope.items = [
+                            ...$scope.items,
+                            ...res.data.collection.items,
+                        ];
+                    });
+                }
+            }
+        );
     },
 });
