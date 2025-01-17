@@ -1,0 +1,15 @@
+<ul>
+    <li ng-repeat="item in items">
+        <video
+            controls
+            src="{{item.video}}"
+            poster="{{item.links[0].href}}"
+            width="250"
+        >
+            <track default kind="captions" src="{{item.links[1].href}}" />
+        </video>
+        <h3>{{item.data[0].title}}</h3>
+        <h6>{{item.data[0].date_created}}</h6>
+        <p>{{item.data[0].description}}</p>
+    </li>
+</ul>
