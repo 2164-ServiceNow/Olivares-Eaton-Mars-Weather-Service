@@ -1,4 +1,4 @@
-const weatherApi = 'https://api.nasa.gov/insight_weather/?api_key=';
+const weatherApi2 = 'https://api.nasa.gov/insight_weather/?api_key=';
 
 angular.module('weather', [])
     .component('weather', {
@@ -6,7 +6,7 @@ angular.module('weather', [])
         controller: function($scope, $http) {
             $scope.someWeather = "the weather sucks!";
             console.log("executed");
-            $http.get(`${weatherApi}DEMO_KEY&feedtype=json&ver=1.0`).then((res => {
+            $http.get(`${weatherApi2}DEMO_KEY&feedtype=json&ver=1.0`).then((res => {
                 let key = res.data.sol_keys.slice(-1)[0];
                 let data = res.data[key]
                 $scope.sol = key

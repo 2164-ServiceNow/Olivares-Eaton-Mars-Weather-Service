@@ -6,13 +6,12 @@ angular.module('roverManifest', [])
         },
         controller: function($scope) {
             $scope.$watch('$ctrl.rover', function(newRover) {
-                console.log('executed');
                 if (newRover) {
                     $scope.name = newRover.name;
-                    $scope.landingDate = newRover.landingDate;
-                    $scope.launchDate = newRover.launchDate;
+                    $scope.landingDate = newRover.landing_date;
+                    $scope.launchDate = newRover.launch_date;
                     $scope.status = newRover.status;
-                    $scope.totalPhotos = newRover.totalPhotos;
+                    $scope.totalPhotos = newRover.total_photos;
                 }
             });
         }
