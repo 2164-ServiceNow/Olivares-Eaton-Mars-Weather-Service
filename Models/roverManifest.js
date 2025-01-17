@@ -4,14 +4,20 @@ angular.module('roverManifest', [])
         bindings: {
             rover: '<'
         },
-        controller: function($scope) {
-            $scope.$watch('$ctrl.rover', function(newRover) {
-                if (newRover) {
-                    $scope.name = newRover.name;
-                    $scope.landingDate = newRover.landing_date;
-                    $scope.launchDate = newRover.launch_date;
-                    $scope.status = newRover.status;
-                    $scope.totalPhotos = newRover.total_photos;
+        controller: function($scope, $http) {
+            $scope.$watch('$ctrl.rover', function(roverName) {
+                let rover;
+                if (roverName) {
+                    //$http.get(`https://api.nasa.gov/mars-photos/api/v1/manifests/${roverName]}?api_key=${apiKey}`) //Server issue, returns 500
+                    $http.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName.toLowerCase()}/photos?sol=1000&api_key=${apiKey}`)
+                        .then((response) => {
+                            let rover = response.data.photos[0].rover;
+                            $scope.name = rover.name;
+                            $scope.landingDate = rover.landing_date;
+                            $scope.launchDate = rover.launch_date;
+                            $scope.status = rover.status;
+                            $scope.totalPhotos = rover.total_photos;
+                        });
                 }
             });
         }
