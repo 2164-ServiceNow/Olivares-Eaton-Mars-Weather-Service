@@ -16,7 +16,7 @@ angular.module('roverManifest', [])
                             $scope.landingDate = rover.landing_date;
                             $scope.launchDate = rover.launch_date;
                             $scope.status = rover.status;
-                            $scope.totalPhotos = rover.total_photos;
+                            $scope.id = rover.id;
                         });
                 }
             });
