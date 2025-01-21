@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html
-    lang="en"
-    ng-app="app"
-    ng-controller="backgroundImageController"
-    style="width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
-    on-scroll
->
+<html lang="en" ng-app="app" on-scroll>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,13 +47,19 @@
             };
         </script>
     </head>
-    <body
-        style="
-            width: 100vw;
-            min-height: 100vh;
-            background-color: rgba(0, 0, 0, 0.8);
-        "
-    >
+    <body>
+        <div
+            ng-controller="backgroundImageController"
+            style="position: fixed; z-index: -1; width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
+        >
+            <div
+                style="
+                    width: 100vw;
+                    min-height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.8);
+                "
+            ></div>
+        </div>
         <navigation></navigation>
         <div ng-view></div>
         <script src="index.js"></script>

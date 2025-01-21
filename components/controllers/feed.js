@@ -35,7 +35,7 @@ feed.component('feed', {
                     scrollService.getHeight() -
                         data -
                         scrollService.getViewportHeight() <
-                    0
+                    10
                 ) {
                     $http.get($scope.next).then((res) => {
                         $scope.items = [
