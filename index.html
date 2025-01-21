@@ -25,13 +25,18 @@
         <a href="/">Home</a>
         <a href="/weather">Weather</a>
         <a href="/rovers">Rovers</a>
+        <searchbar></searchbar>
+        
+        <div ng-view>
+        </div>
 
-        <div ng-view></div>
+        <script src="index.js"></script>
         <script src="Models/weatherPage.js"></script>
         <script src="Models/weather.js"></script>
         <!-- <script src="Models/roverPage.js"></script> -->
         <script src="Models/rovers.js"></script>
         <script src="Models/roverManifest.js"></script>
-        <script src="index.js"></script>
+        <script src="Models/searchBar.js"></script>
+        <script src="Models/searchBarService.js"></script>
     </body>
 </html>
