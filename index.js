@@ -12,7 +12,7 @@ app.controller('backgroundImageController', function ($scope, $http) {
 });
 
 // Routing
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'pages/home.html',
@@ -20,4 +20,9 @@ app.config(function ($routeProvider) {
         .when('/videos', {
             templateUrl: 'pages/videos.html',
         });
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false,
+    });
 });

@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html
-    lang="en"
-    ng-app="app"
-    ng-controller="backgroundImageController"
-    style="width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
-    on-scroll
->
+<html lang="en" ng-app="app" on-scroll>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,15 +16,50 @@
             src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
             defer
         ></script>
+        <script
+            src="https://kit.fontawesome.com/d171f224e0.js"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            vermilion: '#E34234',
+                            vermilion90: '#FFEDE9',
+                            vermilion40: '#B72119',
+                            vermilion10: '#410000',
+                            bluishgreen: '#009E74',
+                            bluishgreen90: '#B9FFE0',
+                            bluishgreen40: '#006C4D',
+                            bluishgreen10: '#002115',
+                            skyblue: '#56B4E9',
+                            skyblue90: '#E3F3FF',
+                            skyblue40: '#00658F',
+                            skyblue10: '#001E2E',
+                            orange: '#E69F00',
+                            orange90: '#FFEED7',
+                            orange40: '#805600',
+                            orange10: '#281800',
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
-    <body
-        style="
-            width: 100vw;
-            min-height: 100vh;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
-        "
-    >
+    <body>
+        <div
+            ng-controller="backgroundImageController"
+            style="position: fixed; z-index: -1; width: 100vw; height: 100vh; background: center / cover no-repeat url({{bgImg.url}});"
+        >
+            <div
+                style="
+                    width: 100vw;
+                    min-height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.8);
+                "
+            ></div>
+        </div>
         <navigation></navigation>
         <div ng-view></div>
         <script src="index.js"></script>

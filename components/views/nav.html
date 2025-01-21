@@ -1,10 +1,19 @@
-<div>
-    <nav>
-        <ul>
-            <li ng-repeat="item in nav">
-                <a href="{{item.url}}">{{item.name}}</a>
-            </li>
-        </ul>
-    </nav>
-    <share></share>
+<div class="pt-9">
+    <div
+        class="p-4 mx-auto bg-white rounded-lg shadow-lg flex gap-x-4 justify-between text-lg max-w-6xl"
+    >
+        <nav class="font-medium text-skyblue40">
+            <ul class="flex gap-x-4">
+                <li ng-repeat="item in nav">
+                    <a
+                        href="{{item.url}}"
+                        class="px-4 py-2 flex gap-x-2 items-center {{location.path() === item.url ? 'bg-skyblue40 text-white font-bold rounded' : ''}}"
+                        ><span class="fa-solid {{item.icon}}"></span
+                        >{{item.name}}</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <share></share>
+    </div>
 </div>
