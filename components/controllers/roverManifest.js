@@ -1,6 +1,6 @@
 angular.module('roverManifest', [])
     .component('roverManifest', {
-        templateUrl: 'Views/roverManifest.html',
+        templateUrl: 'components/views/roverManifest.html',
         bindings: {
             rover: '<'
         },

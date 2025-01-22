@@ -7,20 +7,20 @@ const app = angular.module('app', ['ngRoute', 'weatherPage', 'weather', 'rovers'
 // Gets Astronomy Picture of the Day on load
 app.controller('backgroundImageController', ($scope, $http) => {
     $scope.bgImg = {};
-    // $http.get(`${api}${apiKey}`).then((res) => {
-    //     $scope.bgImg = res.data;
-    // });
+    $http.get(`${api}${apiKey}`).then((res) => {
+        $scope.bgImg = res.data;
+    });
 });
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when("/weather", {
-        templateUrl: "Views/weatherPage.html"
+        templateUrl: "pages/weatherPage.html"
     })
     .when("/rovers", {
-        templateUrl: "Views/roverPage.html"
+        templateUrl: "pages/roverPage.html"
     })
     .when("/asteroids", {
-        templateUrl: "Views/asteroidsPage.html"
+        templateUrl: "pages/asteroidsPage.html"
     });
     $locationProvider.html5Mode({
         enabled: true,

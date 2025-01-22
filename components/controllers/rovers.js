@@ -2,7 +2,7 @@ const rovers = [/*'Sojourner',*/ 'Spirit', 'Opportunity', 'Curiosity', 'Persever
 
 angular.module('rovers', [])
     .component('rovers', {
-        templateUrl: 'Views/rovers.html',
+        templateUrl: 'components/views/rovers.html',
         controller: function($scope) {
             $scope.rovers = rovers;
             $scope.selectRover = function(rover) {

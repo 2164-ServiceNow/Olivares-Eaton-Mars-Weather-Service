@@ -2,7 +2,7 @@ const weatherApi2 = 'https://api.nasa.gov/insight_weather/?api_key=';
 
 angular.module('weather', [])
     .component('weather', {
-        templateUrl: 'Views/weather.html',
+        templateUrl: 'components/views/weather.html',
         controller: function($scope, $http) {
             $scope.someWeather = "the weather sucks!";
             $http.get(`${weatherApi2}${apiKey}&feedtype=json&ver=1.0`).then((res => {
