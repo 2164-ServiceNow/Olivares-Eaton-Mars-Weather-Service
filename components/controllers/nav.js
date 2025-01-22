@@ -9,6 +9,7 @@ navigation.component('navigation', {
             { url: '/videos', name: 'Videos', icon: 'fa-video' },
             { url: '/weather', name: "Weather"},
             { url: '/rovers', name: 'Rovers'},
+            { url: '/images', name: 'Images'},
             { url: '/asteroids', name: 'Asteroids'}
         ];
     },
