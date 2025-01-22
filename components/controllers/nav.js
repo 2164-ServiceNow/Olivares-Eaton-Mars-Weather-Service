@@ -7,6 +7,9 @@ navigation.component('navigation', {
         $scope.nav = [
             { url: '/', name: 'Home', icon: 'fa-home' },
             { url: '/videos', name: 'Videos', icon: 'fa-video' },
+            { url: '/weather', name: "Weather"},
+            { url: '/rovers', name: 'Rovers'},
+            { url: '/asteroids', name: 'Asteroids'}
         ];
     },
 });

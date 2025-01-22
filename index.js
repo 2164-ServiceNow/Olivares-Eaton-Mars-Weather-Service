@@ -1,7 +1,7 @@
 'use strict';
 const apod = 'https://api.nasa.gov/planetary/apod?api_key=';
 const apiKey = 'CgpgMC0Wtld60xf2JqkVIeqBDboBvHOmzlSVJIE9';
-const app = angular.module('app', ['ngRoute', 'navigation', 'feed', 'share']);
+const app = angular.module('app', ['ngRoute', 'navigation', 'feed', 'share', 'weatherPage', 'weather', 'rovers', 'roverManifest', 'searchBar', 'asteroids']);
 
 // Gets Astronomy Picture of the Day on load
 app.controller('backgroundImageController', function ($scope, $http) {
@@ -19,6 +19,15 @@ app.config(function ($routeProvider, $locationProvider) {
         })
         .when('/videos', {
             templateUrl: 'pages/videos.html',
+        })
+        .when("/weather", {
+            templateUrl: "pages/weatherPage.html"
+        })
+        .when("/rovers", {
+            templateUrl: "pages/roverPage.html"
+        })
+        .when("/asteroids", {
+            templateUrl: "pages/asteroidsPage.html"
         });
 
     $locationProvider.html5Mode({
