@@ -20,21 +20,22 @@
 3.  Looking a weather on previous dates, like past week or past month.
 4.  Search bar where the user can select the rover and place they'd like to look for.
 5.  Use APOD to have a different background image for the site every day.
-6.  The users can share the photo with the weather and other related metadata to social media.
+6.  The users can share the link to social media.
 7.  Have a feed of videos related to Mars from NASA Image and Video Library.
 8.  Section for rovers with the Mission Manifest about them, like their last know location based on the last photo taken, launch and landing date, etc.
 
 **Development Environment Setup: TO BE DETERMINED**
 
--   Detailed instructions for setting up the development environment (e.g., Node.js version, npm/yarn commands, AngularJS CLI commands if applicable).
--   Precise steps to install all project dependencies.
+-   Clone the repository.
+-   Use a server to launch the index.html (if you're using VS Code, you can use the Live Server extension).
 
 **Styleguide:**
 
 -   4 spaces for indentation.
 -   Controllers folder for controllers.
+-   Directives folder for directives.
 -   Models folder for services.
--   Views folder for directives.
+-   Views folder for HTML.
 
 **Collaborators:**
 

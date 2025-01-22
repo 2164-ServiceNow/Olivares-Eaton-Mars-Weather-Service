@@ -1,29 +1,37 @@
 'use strict';
-
-const api = 'https://api.nasa.gov/planetary/apod?api_key=';
+const apod = 'https://api.nasa.gov/planetary/apod?api_key=';
 const apiKey = 'CgpgMC0Wtld60xf2JqkVIeqBDboBvHOmzlSVJIE9';
-const app = angular.module('app', ['ngRoute', 'weatherPage', 'weather', 'rovers', 'roverManifest', 'searchBar', 'asteroids']);
+const app = angular.module('app', ['ngRoute', 'navigation', 'feed', 'share', 'weatherPage', 'weather', 'rovers', 'roverManifest', 'searchBar', 'asteroids']);
 
 // Gets Astronomy Picture of the Day on load
-app.controller('backgroundImageController', ($scope, $http) => {
+app.controller('backgroundImageController', function ($scope, $http) {
     $scope.bgImg = {};
-    $http.get(`${api}${apiKey}`).then((res) => {
+    $http.get(`${apod}${apiKey}`).then((res) => {
         $scope.bgImg = res.data;
     });
 });
 
-app.config(function($routeProvider, $locationProvider) {
-    $routeProvider.when("/weather", {
-        templateUrl: "pages/weatherPage.html"
-    })
-    .when("/rovers", {
-        templateUrl: "pages/roverPage.html"
-    })
-    .when("/asteroids", {
-        templateUrl: "pages/asteroidsPage.html"
-    });
+// Routing
+app.config(function ($routeProvider, $locationProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'pages/home.html',
+        })
+        .when('/videos', {
+            templateUrl: 'pages/videos.html',
+        })
+        .when("/weather", {
+            templateUrl: "pages/weatherPage.html"
+        })
+        .when("/rovers", {
+            templateUrl: "pages/roverPage.html"
+        })
+        .when("/asteroids", {
+            templateUrl: "pages/asteroidsPage.html"
+        });
+
     $locationProvider.html5Mode({
         enabled: true,
-        requireBase: false
+        requireBase: false,
     });
 });

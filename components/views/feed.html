@@ -1,0 +1,18 @@
+<ul class="flex flex-wrap gap-4">
+    <li ng-repeat="item in items" class="mb-9 w-80">
+        <video
+            controls
+            src="{{item.video}}"
+            poster="{{item.links[0].href}}"
+            width="350"
+        >
+            <track default kind="captions" src="{{item.links[1].href}}" />
+        </video>
+        <h3 class="text-lg font-bold">{{item.data[0].title}}</h3>
+        <h6 class="text-sm font-bold mb-5">
+            <span class="fa-solid fa-clock"></span>
+            {{item.data[0].date_created | date:'medium'}}
+        </h6>
+        <p>{{item.data[0].description | limitTo: 200}}...</p>
+    </li>
+</ul>
