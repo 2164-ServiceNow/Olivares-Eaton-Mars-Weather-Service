@@ -1,7 +1,18 @@
 'use strict';
 const apod = 'https://api.nasa.gov/planetary/apod?api_key=';
 const apiKey = 'CgpgMC0Wtld60xf2JqkVIeqBDboBvHOmzlSVJIE9';
-const app = angular.module('app', ['ngRoute', 'navigation', 'feed', 'share', 'weatherPage', 'weather', 'rovers', 'roverManifest', 'searchBar', 'asteroids']);
+const app = angular.module('app', [
+    'ngRoute',
+    'navigation',
+    'feed',
+    'share',
+    'weatherPage',
+    'weather',
+    'rovers',
+    'roverManifest',
+    'searchBar',
+    'asteroids',
+]);
 
 // Gets Astronomy Picture of the Day on load
 app.controller('backgroundImageController', function ($scope, $http) {
@@ -15,20 +26,17 @@ app.controller('backgroundImageController', function ($scope, $http) {
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'pages/home.html',
+            templateUrl: 'pages/weatherPage.html',
         })
         .when('/videos', {
             templateUrl: 'pages/videos.html',
         })
-        .when("/weather", {
-            templateUrl: "pages/weatherPage.html"
-        })
-        .when("/rovers", {
-            templateUrl: "pages/roverPage.html"
-        })
-        .when("/asteroids", {
-            templateUrl: "pages/asteroidsPage.html"
+        .when('/rovers', {
+            templateUrl: 'pages/roverPage.html',
         });
+    // .when('/asteroids', {
+    //     templateUrl: 'pages/asteroidsPage.html',
+    // });
 
     $locationProvider.html5Mode({
         enabled: true,

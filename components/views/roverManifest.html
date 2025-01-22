@@ -1,7 +1,36 @@
-<div ng-if="name" class="container m-auto grid grid-cols-1 grid-rows5 gap4">
-    <div class="tile col-span-full border">Name: {{name}}</div>
-    <div class="tile col-span-full border">Landing Date: {{landingDate}}</div>
-    <div class="tile col-span-full border">Launch Date: {{launchDate}}</div>
-    <div class="tile col-span-full border">Status: {{status}}</div>
-    <div class="tile col-span-full border">Rover id: {{id}}</div>
+<div ng-if="name" class="container m-auto grid grid-cols-1 grid-rows5 gap-4">
+    <div class="tile col-span-full">
+        <h5 class="text-lg">
+            <span class="fa-solid fa-fingerprint mr-2"></span>Rover id
+        </h5>
+        <h3 class="text-2xl font-bold ml-7">{{id}}</h3>
+    </div>
+    <div class="tile col-span-full">
+        <h5 class="text-lg">
+            <span class="fa-solid fa-robot mr-2"></span>Name
+        </h5>
+        <h3 class="text-2xl font-bold ml-7">{{name}}</h3>
+    </div>
+    <div class="tile col-span-full">
+        <h5 class="text-lg">
+            <span class="fa-solid fa-rocket mr-2"></span>Launch Date
+        </h5>
+        <h3 class="text-2xl font-bold ml-7">
+            {{launchDate | date : 'fullDate'}}
+        </h3>
+    </div>
+    <div class="tile col-span-full">
+        <h5 class="text-lg">
+            <span class="fa-solid fa-helicopter-symbol mr-2"></span>Landing Date
+        </h5>
+        <h3 class="text-2xl font-bold ml-7">
+            {{landingDate | date : 'fullDate'}}
+        </h3>
+    </div>
+    <div class="tile col-span-full">
+        <h5 class="text-lg">
+            <span class="fa-solid fa-signal mr-2"></span>Status
+        </h5>
+        <h3 class="text-2xl font-bold ml-7">{{status}}</h3>
+    </div>
 </div>

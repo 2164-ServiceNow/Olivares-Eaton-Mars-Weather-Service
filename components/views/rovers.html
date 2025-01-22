@@ -1,4 +1,12 @@
-<ul>
-    <li ng-repeat="rover in rovers" ng-click="selectRover(rover)">{{rover}}</li>
-</ul>
-<rover-manifest rover="selectedRover"></rover-manifest>
+<div class="flex gap-20">
+    <ul class="flex flex-col shrink">
+        <li
+            ng-repeat="rover in rovers"
+            ng-click="selectRover(rover)"
+            class="mb-5 cursor-pointer {{rover === selectedRover ? 'font-bold underline' : ''}}"
+        >
+            {{rover}}
+        </li>
+    </ul>
+    <rover-manifest rover="selectedRover"></rover-manifest>
+</div>
