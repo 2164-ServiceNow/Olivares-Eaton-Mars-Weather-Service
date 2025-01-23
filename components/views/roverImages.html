@@ -1,1 +1,5 @@
-<h1>{{roverImages}}</h1>
+<div ng-repeat="image in roverImages">
+    <img ng-src="{{image.img_src}}">
+    <p>{{image.img_src}}</p>
+    <p>{{image}}</p>
+</div>

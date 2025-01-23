@@ -5,7 +5,6 @@ angular.module('app')
             this.query = query;
         }
         this.getQuery = function() {
-            console.log('get')
             return this.query;
         }
     });

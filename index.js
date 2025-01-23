@@ -6,7 +6,6 @@ const app = angular.module('app', [
     'navigation',
     'feed',
     'share',
-    'weatherPage',
     'weather',
     'rovers',
     'roverManifest',
@@ -40,7 +39,7 @@ app.config(function ($routeProvider, $locationProvider) {
         })
         .when("/images", {
             templateUrl: "pages/roverImagePage.html"
-        })
+        });
     // .when('/asteroids', {
     //     templateUrl: 'pages/asteroidsPage.html',
     // });
