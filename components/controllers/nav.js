@@ -5,12 +5,13 @@ navigation.component('navigation', {
     controller: function ($scope, $location) {
         $scope.location = $location;
         $scope.nav = [
-            { url: '/', name: 'Home', icon: 'fa-home' },
+            { url: '/', name: 'Weather', icon: 'fa-temperature-quarter' },
+            { url: '/rovers', name: 'Rovers', icon: 'fa-robot' },
             { url: '/videos', name: 'Videos', icon: 'fa-video' },
             { url: '/weather', name: "Weather"},
             { url: '/rovers', name: 'Rovers'},
             { url: '/images', name: 'Images'},
-            { url: '/asteroids', name: 'Asteroids'}
+            // { url: '/asteroids', name: 'Asteroids'}
         ];
     },
 });

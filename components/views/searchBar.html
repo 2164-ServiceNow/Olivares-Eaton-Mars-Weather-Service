@@ -1,3 +1,3 @@
-<label for="search">Rover: </label>
-<input ng-model="searchValue" />
-<button ng-click="search()">Search</button>
+<label for="search" ng-hide="true">Rover: </label>
+<input id="search" ng-model="searchValue" placeholder="Search Rover" class="px-4 py-2 bg-orange10 rounded text-white"></input>
+<button ng-click="search()" class="px-4 py-2 bg-orange text-white font-bold rounded">Search</button>
