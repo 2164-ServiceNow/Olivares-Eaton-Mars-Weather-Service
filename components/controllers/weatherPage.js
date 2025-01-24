@@ -53,7 +53,6 @@ angular
                         for (const item of $scope.weatherData.weatherDates) {
                             if (Object.values(item).indexOf(data) > -1) {
                                 $scope.selected = item;
-                                console.log(data);
                             }
                         }
                     }

@@ -8,7 +8,7 @@ navigation.component('navigation', {
             { url: '/', name: 'Weather', icon: 'fa-temperature-quarter' },
             { url: '/rovers', name: 'Rovers', icon: 'fa-robot' },
             { url: '/videos', name: 'Videos', icon: 'fa-video' },
-            { url: '/images', name: 'Images'},
+            { url: '/images', name: 'Images', icon: 'fa-image' },
             // { url: '/asteroids', name: 'Asteroids'}
         ];
     },

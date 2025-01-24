@@ -1,4 +1,4 @@
 <label for="search" ng-hide="true">Rover: </label>
 <input id="search" ng-model="searchValue" placeholder="Search Rover" class="px-4 py-2 bg-orange10 rounded text-white"></input>
-<input id="number" type="number" min="0" oninput="this.value = !!this.value && Math.abs(this.value) >=0 ? Math.abs(this.value) : 0" ng-model="sol" class="px-4 py-1 my-2 bg-orange10 rounded text-white w-[100px]" />
+<input id="number" type="number" min="0" oninput="this.value = !!this.value && Math.abs(this.value) >=0 ? Math.abs(this.value) : 0" ng-model="sol" class="px-4 py-2 my-2 bg-orange10 rounded text-white w-[100px]" />
 <button ng-click="search()" class="px-4 py-2 bg-orange text-white font-bold rounded">Search</button>

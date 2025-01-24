@@ -1,6 +1,6 @@
 <div class="pt-9">
     <div
-        class="p-4 mx-auto bg-white rounded-lg shadow-lg flex gap-x-4 justify-between text-lg max-w-6xl"
+        class="p-4 mx-auto bg-white rounded-lg shadow-lg flex gap-x-4 justify-between text-lg max-w-6xl flex items-center"
     >
         <nav class="font-medium text-skyblue40">
             <ul class="flex gap-x-4">
@@ -14,7 +14,7 @@
                 </li>
             </ul>
         </nav>
-        <searchbar></searchbar>
+        <searchbar ng-show="location.path() === '/images'"></searchbar>
         <share></share>
     </div>
 </div>
