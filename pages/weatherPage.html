@@ -1,0 +1,78 @@
+<div ng-controller="weatherController" class="text-white p-9 mx-auto max-w-6xl">
+    <div class="flex justify-between items-center mb-9">
+        <h1 class="text-2xl font-bold">
+            Last Weather at Elysium Planitia, Mars
+        </h1>
+        <div class="flex flex-col">
+            <label for="weather_dates" class="font-bold mb-1"
+                >Select dates</label
+            >
+            <select
+                name="weather_dates"
+                id="weather_dates"
+                class="px-4 py-2 bg-orange40 rounded text-white"
+                ng-model="index"
+            >
+                <option
+                    ng-repeat="weather in weatherData.weatherDates"
+                    value="{{weather.sol}}"
+                >
+                    {{weather.firstDate | date: 'fullDate'}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-sun mr-2"></span>Sol
+            </h5>
+            <h3 class="text-2xl font-bold ml-6">
+                {{selected.sol || 'Not available'}}
+            </h3>
+        </div>
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-tree mr-2"></span>Season
+            </h5>
+            <h3 class="text-2xl font-bold ml-6">
+                {{selected.season || 'Not available'}}
+            </h3>
+        </div>
+
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-temperature-quarter mr-2"></span
+                >Atmospheric Temperature
+            </h5>
+            <h3 class="text-2xl font-bold ml-5">
+                {{selected.atemp || 'Not available '}}&deg;C
+            </h3>
+        </div>
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-cloud mr-2"></span>Atmospheric Pressure
+            </h5>
+            <h3 class="text-2xl font-bold ml-7">
+                {{selected.pre || 'Not available '}}Pa
+            </h3>
+        </div>
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-wind mr-2"></span>Wind Speed
+            </h5>
+            <h3 class="text-2xl font-bold ml-7">
+                {{selected.hws || 'Not available '}}m/s
+            </h3>
+        </div>
+        <div>
+            <h5 class="text-lg">
+                <span class="fa-solid fa-diamond-turn-right mr-2"></span>Wind
+                Direction
+            </h5>
+            <h3 class="text-2xl font-bold ml-7">
+                {{selected.wd || 'Not available'}}
+            </h3>
+        </div>
+    </div>
+</div>
