@@ -1,8 +1,8 @@
 const rovers = [
-    /*'Sojourner',*/ 'Spirit',
-    'Opportunity',
-    'Curiosity',
-    'Perseverance',
+    /*'Sojourner',*/ 'spirit',
+    'opportunity',
+    'curiosity',
+    'perseverance',
 ];
 
 angular.module('rovers', []).component('rovers', {

@@ -10,6 +10,7 @@ const app = angular.module('app', [
     'rovers',
     'roverManifest',
     'searchBar',
+    'roverImages',
     'asteroids',
 ]);
 
@@ -30,8 +31,14 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/videos', {
             templateUrl: 'pages/videos.html',
         })
-        .when('/rovers', {
-            templateUrl: 'pages/roverPage.html',
+        .when("/weather", {
+            templateUrl: "pages/weatherPage.html"
+        })
+        .when("/rovers", {
+            templateUrl: "pages/roverPage.html"
+        })
+        .when("/images", {
+            templateUrl: "pages/roverImagePage.html"
         });
     // .when('/asteroids', {
     //     templateUrl: 'pages/asteroidsPage.html',

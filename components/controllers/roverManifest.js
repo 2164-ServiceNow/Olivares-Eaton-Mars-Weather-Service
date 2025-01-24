@@ -12,6 +12,8 @@ angular.module('roverManifest', [])
                     $http.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName.toLowerCase()}/photos?sol=1000&api_key=${apiKey}`)
                         .then((response) => {
                             let rover = response.data.photos[0].rover;
+                            $scope.photos = response.data.photos;
+                            console.log(response.data);
                             $scope.name = rover.name;
                             $scope.landingDate = rover.landing_date;
                             $scope.launchDate = rover.launch_date;

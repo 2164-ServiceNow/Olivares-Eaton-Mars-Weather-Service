@@ -1,0 +1,10 @@
+<div class="divide-solid bg-white">
+    <div ng-if="roverImages">
+        <div ng-repeat="image in roverImages" class="border-solid text-white grid grid-cols-1 m-10 border-2 border-white-900 border-solid bg-black rounded-2xl">
+            <p class="pl-10">Sol {{image.sol}} - {{image.earth_date}}</p>
+            <p class="pl-10">Camera: {{image.camera.full_name}}</p>
+            <img src="{{image.img_src}}" alt="{{image.rover.name}}'s endpoint is currently down" class="mx-auto">
+        </div>
+    </div>
+    <h1 ng-if="!roverImages">"{{invalidName}}" is not a valid rover name</h1>
+</div>
