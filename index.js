@@ -6,7 +6,7 @@ const app = angular.module('app', [
     'navigation',
     'feed',
     'share',
-    'weather',
+    'weatherPage',
     'rovers',
     'roverManifest',
     'searchBar',
