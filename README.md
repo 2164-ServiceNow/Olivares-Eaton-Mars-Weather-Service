@@ -17,12 +17,12 @@
 
 1.  As a User, I want to know the current weather on Mars, so I can better understand Mars.
 2.  As a User, I want to view the images from a specific Mars rover, so I can see where it's been.
-3.  As a User, I want to look at the weather at other times, so I can see how it's changed.
+3.  As a User, I want to see the mission manifest of specific rovers, so I can better understand their operations.
 4.  As a User, I want a way to search by rover name and Sol, so I can see what different rovers have done on different days.
 5.  As a User, I want a changing background with a photo of space, so that the website feels fresh.
 6.  As a User, I want to share what I've seen on social media, so others can see the things I find interesting.
 7.  As a User, I want to see videos about Mars, so I can learn more about it.
-8.  As a User, I want to see the mission manifest of specific rovers, so I can better understand their operations.
+8.  As a User, I want to look at the weather at other times, so I can see how it's changed.
 
 **Development Environment Setup: TO BE DETERMINED**
 
