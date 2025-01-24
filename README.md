@@ -15,14 +15,14 @@
 
 **User Stories:** (8 Total - 4 Per Developer)
 
-1.  Last weather at an specific rover location.
-2.  Looking at photos of the selected rover.
-3.  Looking a weather on previous dates.
-4.  Search bar where the user can select the rover and and see images from that rover.
-5.  Use APOD to have a different background image for the site every day.
-6.  The users can share the link to social media.
-7.  Have a feed of videos related to Mars from NASA Image and Video Library.
-8.  Section for rovers with the Mission Manifest about them, like their last know location based on the last photo taken, launch and landing date, etc.
+1.  As a User, I want to know the current weather on Mars, so I can better understand Mars.
+2.  As a User, I want to view the images from a specific Mars rover, so I can see where it's been.
+3.  As a User, I want to look at the weather at other times, so I can see how it's changed.
+4.  As a User, I want a way to search by rover name and Sol, so I can see what different rovers have done on different days.
+5.  As a User, I want a changing background with a photo of space, so that the website feels fresh.
+6.  As a User, I want to share what I've seen on social media, so others can see the things I find interesting.
+7.  As a User, I want to see videos about Mars, so I can learn more about it.
+8.  As a User, I want to see the mission manifest of specific rovers, so I can better understand their operations.
 
 **Development Environment Setup: TO BE DETERMINED**
 
