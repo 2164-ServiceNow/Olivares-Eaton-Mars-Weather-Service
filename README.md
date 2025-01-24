@@ -15,10 +15,10 @@
 
 **User Stories:** (8 Total - 4 Per Developer)
 
-1.  Current weather at an specific (selectable, needs to define default) rover location.
-2.  Looking at photos of the selected rover, with corresponding weather.
-3.  Looking a weather on previous dates, like past week or past month.
-4.  Search bar where the user can select the rover and place they'd like to look for.
+1.  Last weather at an specific rover location.
+2.  Looking at photos of the selected rover.
+3.  Looking a weather on previous dates.
+4.  Search bar where the user can select the rover and and see images from that rover.
 5.  Use APOD to have a different background image for the site every day.
 6.  The users can share the link to social media.
 7.  Have a feed of videos related to Mars from NASA Image and Video Library.
@@ -34,7 +34,7 @@
 -   4 spaces for indentation.
 -   Controllers folder for controllers.
 -   Directives folder for directives.
--   Models folder for services.
+-   Services folder for services.
 -   Views folder for HTML.
 
 **Collaborators:**
